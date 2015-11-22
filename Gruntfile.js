@@ -38,7 +38,8 @@ module.exports = function (grunt) {
       },
       babel: {
         files: ['<%= config.app %>/scripts/{,*/}*.js', '<%= config.app %>/scripts/{,*/}*.jsx'],
-        tasks: ['babel:dist']
+        tasks: [//'babel:dist'
+        ]
       },
       babelTest: {
         files: ['test/spec/{,*/}*.js'],

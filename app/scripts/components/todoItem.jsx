@@ -1,9 +1,16 @@
 var TodoItem = React.createClass({
-  click: function(){
-    console.log('clicked');
+  toggleChecked: function(event){
+    this.setState({ complete: event.target.checked });
   },
+
   render: function(){
-    return <div onClick={this.click}>Hello {this.props.name} </div>;
+    return (
+      <div>
+        <input type="checkbox" checked={complete} onClick={this.toggleChecked} />
+        <h5>{this.props.title}</h5>
+        {this.props.notes}
+      </div>
+    );
   }
 });
 
